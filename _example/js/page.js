@@ -1,6 +1,6 @@
 var Page = (function() {
 
-	var $container = $( '#container' ),
+	var $container = $( '#dv-container' ),
 		$bookBlock = $( '#bb-bookblock' ),
 		$items = $bookBlock.children(),
 		itemsCount = $items.length,
@@ -25,8 +25,9 @@ var Page = (function() {
 			}
 		} ),
 		$navNext = $( '#bb-nav-next' ),
-		$navPrev = $( '#bb-nav-prev' ).hide(),
-		$menuItems = $container.find( 'ul.menu-toc > li' ),
+		// $navPrev = $( '#bb-nav-prev' ).hide(),
+		$navPrev = $( '#bb-nav-prev' ).css('opacity', '0.1'),
+		$menuItems = $container.find( 'ul.menu-toc li.clickable' ),
 		$tblcontents = $( '#tblcontents' ),
 		transEndEventNames = {
 			'WebkitTransition': 'webkitTransitionEnd',
@@ -50,11 +51,21 @@ var Page = (function() {
 
 		// add navigation events
 		$navNext.on( 'click', function() {
+			let canClick = $(this).css('opacity') == '1';
+			if (!canClick) {
+				return false;
+			}
+
 			bb.next();
 			return false;
 		} );
 
 		$navPrev.on( 'click', function() {
+			let canClick = $(this).css('opacity') == '1';
+			if (!canClick) {
+				return false;
+			}
+
 			bb.prev();
 			return false;
 		} );
@@ -122,22 +133,32 @@ var Page = (function() {
 	}
 
 	function updateTOC() {
-		$menuItems.removeClass( 'menu-toc-current' ).eq( current ).addClass( 'menu-toc-current' );
+		$menuItems.removeClass( 'menu-toc-current' );
+		$menuItems.eq( current ).addClass( 'menu-toc-current' );
 	}
 
 	function updateNavigation( isLastPage ) {
 		
 		if( current === 0 ) {
-			$navNext.show();
-			$navPrev.hide();
+			// $navNext.show();
+			// $navPrev.hide();
+
+			$navNext.css('opacity', '1');
+			$navPrev.css('opacity', '0.1');
 		}
 		else if( isLastPage ) {
-			$navNext.hide();
-			$navPrev.show();
+			// $navNext.hide();
+			// $navPrev.show();
+
+			$navNext.css('opacity', '0.1');
+			$navPrev.css('opacity', '1');
 		}
 		else {
-			$navNext.show();
-			$navPrev.show();
+			// $navNext.show();
+			// $navPrev.show();
+
+			$navNext.css('opacity', '1');
+			$navPrev.css('opacity', '1');
 		}
 
 	}
