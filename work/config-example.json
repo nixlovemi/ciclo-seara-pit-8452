@@ -1,0 +1,26 @@
+{
+    "title": "PAGE TITLE",
+    "email": {
+        "Mailer": "smtp",
+        "SMTPAuth": true,
+        "SMTPSecure": "ssl",
+        "Port": 465,
+        "Host": "host.com.br",
+        "Username": "username@host.com.br",
+        "Password": "Password123",
+        "FromName": "FROM NAME",
+        "FromEmail": "from-name@host.com.br"
+    },
+    "pages": {
+        "01": {
+            "path": "path/to/page1.php",
+            "menu": true,
+            "menuIdx": 0,
+            "product": "PRODUCT NAME",
+            "export": {
+                "thumb": "path/to/thumb1.jpg",
+                "file": "path/to/file1.zip"
+            }
+        }
+    }
+}
