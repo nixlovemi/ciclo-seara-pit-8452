@@ -1,0 +1,1 @@
+<img class="img-fluid img-full" src="images/05_Seara_Linha_Dia_a_Dia_1920_1200.jpg" />

@@ -70,6 +70,7 @@ var Page = (function() {
 		} );
 		
 		// add swipe events
+		/*
 		$items.on( {
 			'swipeleft'		: function( event ) {
 				if( $container.data( 'opened' ) ) {
@@ -86,6 +87,7 @@ var Page = (function() {
 				return false;
 			}
 		} );
+		*/
 
 		// show table of contents
 		$tblcontents.on( 'click', toggleTOC );
@@ -115,6 +117,8 @@ var Page = (function() {
 	}
 
 	function setJSP( action, idx ) {
+		// disabling it for now
+		return;
 		
 		var idx = idx === undefined ? current : idx,
 			$content = $items.eq( idx ).children( 'div.content' ),

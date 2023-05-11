@@ -1,0 +1,1 @@
+<img class="img-fluid img-full" src="images/09_Lombo_Suino_Temperado_1920_1200.jpg" />

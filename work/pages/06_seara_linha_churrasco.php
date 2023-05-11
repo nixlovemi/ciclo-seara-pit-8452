@@ -1,0 +1,1 @@
+<img class="img-fluid img-full" src="images/06_Seara_Linha_Churrasco_1920_1200.jpg" />

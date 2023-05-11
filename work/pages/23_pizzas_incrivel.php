@@ -1,0 +1,1 @@
+<img class="img-fluid img-full" src="images/23_pizzas_incrivel_1920_1200.jpg" />

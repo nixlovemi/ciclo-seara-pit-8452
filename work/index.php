@@ -13,8 +13,8 @@ $_SESSION['config'] = $config;
 		<title><?=$config['title']?></title>
 		<meta name="description" content="<?=$config['title']?>" />
 		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=1280, height=800, initial-scale=1.0" />
 		<link rel="shortcut icon" href="../favicon.ico" /> 
 		<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.custom.css" />
 		<link rel="stylesheet" type="text/css" href="css/bookblock.css" />
@@ -29,12 +29,6 @@ $_SESSION['config'] = $config;
 				<h3>Menu</h3>
 				<ul id="menu-toc" class="menu-toc">
 					<?php
-					/*
-					$menu = array_filter($config['pages'], function($val) {
-						return $val['menu'] === true;
-					});
-					*/
-
 					$current = 'menu-toc-current';
 					foreach($config['pages'] as $item):?>
 						<li
@@ -45,26 +39,6 @@ $_SESSION['config'] = $config;
 							<a href="javascript:;"><?=$item['product']?></a>
 						</li>
 					<?php $current = ''; endforeach; ?>
-
-					<!--
-					<li>
-						<span class="menu-group">Linha 1</span>
-						<ul>
-							<li class="clickable menu-toc-current">
-								<a href="javascript:;">Levíssimo</a>
-							</li>
-						</ul>
-					</li>
-					<li class="clickable"><a href="javascript:;">Produto 2</a></li>
-					<li class="clickable"><a href="javascript:;">Produto 3</a></li>
-					<li class="clickable"><a href="javascript:;">Produto 4</a></li>
-					<li class="clickable"><a href="javascript:;">Produto 5</a></li>
-					<li class="clickable"><a href="javascript:;">Produto 6</a></li>
-					<li class="clickable"><a href="javascript:;">Produto 7</a></li>
-					<li class="clickable"><a href="javascript:;">Produto 8</a></li>
-					<li class="clickable"><a href="javascript:;">Produto 9</a></li>
-					<li class="clickable"><a href="javascript:;">Produto 10</a></li>
-					-->
 				</ul>
 			</div>
 
@@ -72,24 +46,26 @@ $_SESSION['config'] = $config;
 				<div id="bb-bookblock" class="bb-bookblock">
 					<?php foreach($config['pages'] as $nbr => $arrInfo): ?>
 						<div class="bb-item" id="<?=ITEM_PAGE_PREFIX . $nbr?>">
-							<div class="content">
-								<div class="scroller">
-									<?php include($arrInfo['path']) ?>
-								</div>
-							</div>
+							<?php include($arrInfo['path']) ?>
 						</div>
 					<?php endforeach; ?>
 				</div>
 				
 				<nav>
 					<span id="bb-email" data-toggle="modal" data-target="#emailModal">
-						<i class="fa fa-envelope-o" aria-hidden="true"></i>
+						<img src="images/nav-share.png" />
 					</span>
-					<span id="bb-nav-prev">&larr;</span>
-					<span id="bb-nav-next">&rarr;</span>
+					<span id="bb-nav-prev">
+						<img src="images/nav-left.png" />
+					</span>
+					<span id="bb-nav-next">
+						<img src="images/nav-right.png" />
+					</span>
 				</nav>
 
-				<span id="tblcontents" class="menu-button">Lista dos itens</span>
+				<span id="tblcontents" class="menu-button">
+					<img src="images/nav-menu.png" />
+				</span>
 
 			</div>
 		</div>
@@ -103,8 +79,60 @@ $_SESSION['config'] = $config;
 		<script src="js/jquery.bookblock.js"></script>
 		<script src="js/page.js"></script>
 		<script>
+			jQuery.fn.center = function () {
+				this.css("position","absolute");
+				this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + 
+															$(window).scrollTop()) + "px");
+				this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + 
+															$(window).scrollLeft()) + "px");
+				return this;
+			}
+
+			function execWindowSizeCalc()
+			{
+				let $baseDiv = $('#bb-bookblock');
+				let dvW = $(window).width();
+				let dvH = $(window).height();
+				// let targetW = 2400;
+				// let targetH = 1600;
+				let targetW = 1920;
+				let targetH = 1200;
+
+				let newW = 0;
+				let newH = 0;
+
+				if (dvW <= dvH) {
+					newW = dvW;
+					newH = newW * (targetH / targetW);
+				} else {
+					newH = dvH;
+					newW = newH * (targetW / targetH);
+				}
+
+				// adjust if needed O____O
+				if (newW > dvW) {
+					newW = dvW;
+					newH = newW * (targetH / targetW);
+				}
+				if (newH > dvH) {
+					newH = dvH;
+					newW = newH * (targetW / targetH);
+				}
+
+				$baseDiv.width(newW);
+				$baseDiv.height(newH);
+
+				// center div
+				$baseDiv.center();
+			}
+
 			$(function() {
 				Page.init();
+			});
+
+			execWindowSizeCalc();
+			$( window ).on( "resize", function() {
+				execWindowSizeCalc();
 			});
 		</script>
 

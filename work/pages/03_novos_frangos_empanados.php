@@ -1,0 +1,1 @@
+<img class="img-fluid img-full" src="images/03_Frangos_Empanados_1920_1200.jpg" />

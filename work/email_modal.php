@@ -8,12 +8,12 @@ function formHtml($arrExport)
     foreach($arrExport as $item) {
         $number = $item['menuIdx'] + 1;
         $idx = $item['menuIdx'];
+        $produto = $item['product'];
         $thumb = $item['export']['thumb'];
 
         $html .= <<<HTML
-            <div class="col-md-3">
+            <div class="col-md-4 dv-thumb-export">
                 <div class="custom-control custom-checkbox image-checkbox">
-                    Página $number
                     <input
                         type="checkbox"
                         class="custom-control-input"
@@ -21,7 +21,7 @@ function formHtml($arrExport)
                         id="ck$idx"
                     />
                     <label class="custom-control-label" for="ck$idx">
-                        <img src="$thumb" alt="#" class="img-fluid">
+                        <img src="$thumb" alt="#" class="img-fluid" title="$produto">
                     </label>
                 </div>
             </div>
@@ -58,7 +58,7 @@ if (isset($_POST['send']) && $_POST['send'] == 1) {
 ?>
 
 <div class="modal" tabindex="-1" role="dialog" id="emailModal">
-    <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Enviar material</h5>
@@ -97,7 +97,7 @@ if (isset($_POST['send']) && $_POST['send'] == 1) {
                             name="inputEmail"
                             id="inputEmail"
                             placeholder="E-mail ..."
-                            value="a@gmail.com"
+                            value=""
                         />
                     </div>
                 </div>

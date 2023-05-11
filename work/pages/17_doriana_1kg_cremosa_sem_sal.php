@@ -1,0 +1,1 @@
+<img class="img-fluid img-full" src="images/17_doriana_1kg_cremosa_sem_sal_1920_1200.jpg" />

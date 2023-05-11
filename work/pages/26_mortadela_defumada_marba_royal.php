@@ -1,0 +1,1 @@
+<img class="img-fluid img-full" src="images/26_mortadela_defumada_marba_royal_1920_1200.jpg" />

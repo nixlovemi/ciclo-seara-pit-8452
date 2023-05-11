@@ -1,0 +1,1 @@
+<img class="img-fluid img-full" src="images/25_mortadela_tradicional_marba_1920_1200.jpg" />

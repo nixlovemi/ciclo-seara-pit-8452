@@ -1,0 +1,1 @@
+<img class="img-fluid img-full" src="images/04_Big_Tekitos_1920_1200.jpg" />
