@@ -26,7 +26,37 @@ $_SESSION['config'] = $config;
 	<body>
 		<div id="dv-container" class="dv-container">	
 			<div class="menu-panel">
-				<h3>Menu</h3>
+				<h3 class="mb-0">
+					Menu Catálogo
+					<br />
+					<strong id="apas2023">APAS 2023</strong>
+				</h3>
+
+				<ul id="menu-toc" class="menu-toc">
+					<?php
+						$groupOrder = $config['menuGroupOrder'];
+						foreach ($groupOrder as $groupIdx => $groupName): ?>
+							<li>
+								<a class="new-menu-header collapsed" data-toggle="collapse" href="#collapseMenu<?=$groupIdx?>" role="button" aria-expanded="false" aria-controls="collapseMenu<?=$groupIdx?>">
+									<?=$groupName?>
+								</a>
+								<div class="collapse new-menu-links" id="collapseMenu<?=$groupIdx?>">
+									<?php
+									$items = array_filter($config['pages'], function($val) use ($groupIdx) {
+										return $groupIdx === $val['menuGroup'];
+									});
+
+									foreach($items as $menu):?>
+										<a href="javascript:;" class="clickable" data-idx="<?=$menu['menuIdx']?>"><?=$menu['product']?></a>
+									<?php endforeach; ?>
+								</div>
+							</li>
+						<?php endforeach;
+					?>
+				</ul>
+
+				<?php
+				/*
 				<ul id="menu-toc" class="menu-toc">
 					<?php
 					$current = 'menu-toc-current';
@@ -40,6 +70,8 @@ $_SESSION['config'] = $config;
 						</li>
 					<?php $current = ''; endforeach; ?>
 				</ul>
+				*/
+				?>
 			</div>
 
 			<div class="bb-custom-wrapper">

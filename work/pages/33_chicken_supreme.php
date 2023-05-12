@@ -1,0 +1,1 @@
+<img class="img-fluid img-full" src="images/33_chicken_supreme_1920_1200.jpg" />

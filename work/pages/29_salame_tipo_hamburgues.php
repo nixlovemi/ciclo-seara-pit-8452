@@ -1,0 +1,1 @@
+<img class="img-fluid img-full" src="images/29_salame_tipo_hamburgues_1920_1200.jpg" />

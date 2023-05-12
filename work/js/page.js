@@ -26,7 +26,8 @@ var Page = (function() {
 		$navNext = $( '#bb-nav-next' ),
 		// $navPrev = $( '#bb-nav-prev' ).hide(),
 		$navPrev = $( '#bb-nav-prev' ).css('opacity', '0.1'),
-		$menuItems = $container.find( 'ul.menu-toc li.clickable' ),
+		// $menuItems = $container.find( 'ul.menu-toc li.clickable' ),
+		$menuItems = $container.find( 'ul.menu-toc .clickable' ), // accordeon
 		$tblcontents = $( '#tblcontents' ),
 		transEndEventNames = {
 			'WebkitTransition': 'webkitTransitionEnd',
@@ -55,6 +56,11 @@ var Page = (function() {
 				return false;
 			}
 
+			/*
+			current = getNextCurrent();
+			updateTOC();
+			*/
+
 			bb.next();
 			return false;
 		} );
@@ -64,6 +70,11 @@ var Page = (function() {
 			if (!canClick) {
 				return false;
 			}
+
+			/*
+			current = getPreviousCurrent();
+			updateTOC();
+			*/
 
 			bb.prev();
 			return false;
@@ -140,7 +151,16 @@ var Page = (function() {
 		$menuItems.removeClass( 'menu-toc-current' );
 		
 		// $menuItems.eq( current ).addClass( 'menu-toc-current' );
-		$menuItems.parent().find(`li.clickable[data-idx='${current}']`).addClass('menu-toc-current');
+		// $menuItems.parent().find(`li.clickable[data-idx='${current}']`).addClass('menu-toc-current');
+		$menuItems.parent().find(`.clickable[data-idx='${current}']`).addClass('menu-toc-current'); // accordeon
+
+		if ($('.menu-toc-current').closest('li').find('.new-menu-links').hasClass('show') === false) {
+			$('.menu-toc .new-menu-links').collapse('hide');
+		}
+
+		setTimeout(() => {
+			$('.menu-toc-current').closest('li').find('.new-menu-links').collapse('show'); // accordeon
+		}, 400);
 	}
 
 	function updateNavigation( isLastPage ) {
@@ -199,6 +219,44 @@ var Page = (function() {
 		}
 
 	}
+
+	function getMenuCurrentIdx() {
+		let retIdx = -1;
+
+		$('#menu-toc .clickable').each(function(idx) {
+			if (retIdx == -1 && $(this).hasClass('menu-toc-current')) {
+				retIdx = idx;
+			}
+		});
+
+		return retIdx;
+	}
+
+	/*
+	function getNextCurrent() {
+		let idx = getMenuCurrentIdx();
+
+		if (idx == -1) {
+			console.log(idx, current);
+			idx = current;
+		}
+
+		let obj = $('#menu-toc .clickable')[idx + 1];
+		return $(obj).data('idx') ?? -1;
+	}
+
+	function getPreviousCurrent() {
+		let idx = getMenuCurrentIdx();
+
+		if (idx == -1) {
+			console.log(idx, current);
+			idx = current;
+		}
+
+		let obj = $('#menu-toc .clickable')[idx - 1];
+		return $(obj).data('idx') ?? -1;
+	}
+	*/
 
 	return { init : init };
 

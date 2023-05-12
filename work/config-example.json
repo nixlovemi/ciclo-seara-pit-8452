@@ -1,5 +1,5 @@
 {
-    "title": "PAGE TITLE",
+    "title": "Title",
     "email": {
         "Mailer": "smtp",
         "SMTPAuth": true,
@@ -7,19 +7,436 @@
         "Port": 465,
         "Host": "host.com.br",
         "Username": "username@host.com.br",
-        "Password": "Password123",
-        "FromName": "FROM NAME",
-        "FromEmail": "from-name@host.com.br"
+        "Password": "Password",
+        "FromName": "From Name",
+        "FromEmail": "dont-reply@host.com.br"
+    },
+    "menuGroupOrder": {
+        "0": "Seara",
+        "1": "Seara Gourmet",
+        "2": "Rezende",
+        "3": "LeBon",
+        "4": "Doriana",
+        "5": "Delicata",
+        "6": "Delícia",
+        "7": "Incrível",
+        "8": "Marba",
+        "9": "Hans",
+        "10": "Eder",
+        "11": "Massa Leve Premium",
+        "12": "Seara Food Solution"
     },
     "pages": {
         "01": {
-            "path": "path/to/page1.php",
-            "menu": true,
+            "path": "pages/01_capa.php",
+            "menu": false,
+            "menuGroup": false,
             "menuIdx": 0,
-            "product": "PRODUCT NAME",
+            "product": "",
+            "export": false
+        },
+        "02": {
+            "path": "pages/02_intro.php",
+            "menu": false,
+            "menuGroup": false,
+            "menuIdx": 1,
+            "product": "",
+            "export": false
+        },
+        "03": {
+            "path": "pages/03_novos_frangos_empanados.php",
+            "menu": true,
+            "menuGroup": 0,
+            "menuIdx": 2,
+            "product": "Frangos Empanados",
             "export": {
-                "thumb": "path/to/thumb1.jpg",
-                "file": "path/to/file1.zip"
+                "thumb": "images/products/03_thumb.jpg",
+                "file": "images/03_Frangos_Empanados_1920_1200.jpg"
+            }
+        },
+        "04": {
+            "path": "pages/04_big_tekitos.php",
+            "menu": true,
+            "menuGroup": 0,
+            "menuIdx": 3,
+            "product": "Big Tekitos",
+            "export": {
+                "thumb": "images/products/04_thumb.jpg",
+                "file": "images/04_Big_Tekitos_1920_1200.jpg"
+            }
+        },
+        "05": {
+            "path": "pages/05_seara_dia_a_dia.php",
+            "menu": true,
+            "menuGroup": 0,
+            "menuIdx": 4,
+            "product": "Linha Dia a Dia",
+            "export": {
+                "thumb": "images/products/05_thumb.jpg",
+                "file": "images/05_Seara_Linha_Dia_a_Dia_1920_1200.jpg"
+            }
+        },
+        "06": {
+            "path": "pages/06_seara_linha_churrasco.php",
+            "menu": true,
+            "menuGroup": 0,
+            "menuIdx": 5,
+            "product": "Linha Churrasco",
+            "export": {
+                "thumb": "images/products/06_thumb.jpg",
+                "file": "images/06_Seara_Linha_Churrasco_1920_1200.jpg"
+            }
+        },
+        "07": {
+            "path": "pages/07_frango_de_padaria.php",
+            "menu": true,
+            "menuGroup": 0,
+            "menuIdx": 6,
+            "product": "Frango de Padaria",
+            "export": {
+                "thumb": "images/products/07_thumb.jpg",
+                "file": "images/07_Frango_de_Padaria_1920_1200.jpg"
+            }
+        },
+        "08": {
+            "path": "pages/08_frango_de_padaria_petisco.php",
+            "menu": true,
+            "menuGroup": 0,
+            "menuIdx": 7,
+            "product": "Frango de Padaria Petisco",
+            "export": {
+                "thumb": "images/products/08_thumb.jpg",
+                "file": "images/08_Frango_de_Padaria_Petisco_1920_1200.jpg"
+            }
+        },
+        "09": {
+            "path": "pages/09_lombo_suino_temperado.php",
+            "menu": true,
+            "menuGroup": 0,
+            "menuIdx": 8,
+            "product": "Lombo Suíno Temperado",
+            "export": {
+                "thumb": "images/products/09_thumb.jpg",
+                "file": "images/09_Lombo_Suino_Temperado_1920_1200.jpg"
+            }
+        },
+        "10": {
+            "path": "pages/10_bacon_seara_gourmet.php",
+            "menu": true,
+            "menuGroup": 1,
+            "menuIdx": 9,
+            "product": "Bacon Gourmet",
+            "export": {
+                "thumb": "images/products/10_thumb.jpg",
+                "file": "images/10_Bacon_Seara_Gourmet_1920_1200.jpg"
+            }
+        },
+        "11": {
+            "path": "pages/11_frios_importados_gourmet.php",
+            "menu": true,
+            "menuGroup": 1,
+            "menuIdx": 10,
+            "product": "Frios Importados Gourmet",
+            "export": {
+                "thumb": "images/products/11_thumb.jpg",
+                "file": "images/11_Frios_Importados_Gourmet_1920_1200.jpg"
+            }
+        },
+        "12": {
+            "path": "pages/12_salames_seara_gourmet.php",
+            "menu": true,
+            "menuGroup": 1,
+            "menuIdx": 11,
+            "product": "Salames Gourmet",
+            "export": {
+                "thumb": "images/products/12_thumb.jpg",
+                "file": "images/12_Salames_Seara_Gourmet_1920_1200.jpg"
+            }
+        },
+        "13": {
+            "path": "pages/13_hamburgueres_seara_gourmet.php",
+            "menu": true,
+            "menuGroup": 1,
+            "menuIdx": 12,
+            "product": "Hambúrgueres Gourmet",
+            "export": {
+                "thumb": "images/products/13_thumb.jpg",
+                "file": "images/13_Hamburgueres_Seara_Gourmet_1920_1200.jpg"
+            }
+        },
+        "14": {
+            "path": "pages/14_chicken_bits_rezende.php",
+            "menu": true,
+            "menuGroup": 2,
+            "menuIdx": 13,
+            "product": "Chicken Bits Rezende",
+            "export": {
+                "thumb": "images/products/14_thumb.jpg",
+                "file": "images/14_Chicken_Bits_Rezende_1920_1200.jpg"
+            }
+        },
+        "15": {
+            "path": "pages/15_linguicas_defumadas_rezende.php",
+            "menu": true,
+            "menuGroup": 2,
+            "menuIdx": 14,
+            "product": "Linguiças Defumadas Rezende",
+            "export": {
+                "thumb": "images/products/15_thumb.jpg",
+                "file": "images/15_Linguicas_Defumadas_Rezende_1920_1200.jpg"
+            }
+        },
+        "16": {
+            "path": "pages/16_empanados_lebon.php",
+            "menu": true,
+            "menuGroup": 3,
+            "menuIdx": 15,
+            "product": "Empanados Lebon",
+            "export": {
+                "thumb": "images/products/16_thumb.jpg",
+                "file": "images/16_Empanados_Lebon_1920_1200.jpg"
+            }
+        },
+        "17": {
+            "path": "pages/17_doriana_1kg_cremosa_sem_sal.php",
+            "menu": true,
+            "menuGroup": 4,
+            "menuIdx": 16,
+            "product": "Doriana 1KG Cremosa Sem Sal",
+            "export": {
+                "thumb": "images/products/17_thumb.jpg",
+                "file": "images/17_doriana_1kg_cremosa_sem_sal_1920_1200.jpg"
+            }
+        },
+        "18": {
+            "path": "pages/18_tablete_culinario_doriana.php",
+            "menu": true,
+            "menuGroup": 4,
+            "menuIdx": 17,
+            "product": "Tablete Culinário Doriana",
+            "export": {
+                "thumb": "images/products/18_thumb.jpg",
+                "file": "images/18_tablete_culinario_doriana_1920_1200.jpg"
+            }
+        },
+        "19": {
+            "path": "pages/19_delicata_cremosa.php",
+            "menu": true,
+            "menuGroup": 5,
+            "menuIdx": 18,
+            "product": "Delicata Cremosa",
+            "export": {
+                "thumb": "images/products/19_thumb.jpg",
+                "file": "images/19_delicata_cremosa_1920_1200.jpg"
+            }
+        },
+        "20": {
+            "path": "pages/20_toque_de_chefe_delicia.php",
+            "menu": true,
+            "menuGroup": 6,
+            "menuIdx": 19,
+            "product": "Toque de Chefe Delícia",
+            "export": {
+                "thumb": "images/products/20_thumb.jpg",
+                "file": "images/20_toque_de_chefe_delicia_1920_1200.jpg"
+            }
+        },
+        "21": {
+            "path": "pages/21_tablete_culinario_delicia.php",
+            "menu": true,
+            "menuGroup": 6,
+            "menuIdx": 20,
+            "product": "Tablete Culinário Delícia",
+            "export": {
+                "thumb": "images/products/21_thumb.jpg",
+                "file": "images/21_tablete_culinario_delicia_1920_1200.jpg"
+            }
+        },
+        "22": {
+            "path": "pages/22_empanados_incrivel.php",
+            "menu": true,
+            "menuGroup": 7,
+            "menuIdx": 21,
+            "product": "Empanados Incrível",
+            "export": {
+                "thumb": "images/products/22_thumb.jpg",
+                "file": "images/22_empanados_incrivel_1920_1200.jpg"
+            }
+        },
+        "23": {
+            "path": "pages/23_pizzas_incrivel.php",
+            "menu": true,
+            "menuGroup": 7,
+            "menuIdx": 22,
+            "product": "Pizzas Incrível",
+            "export": {
+                "thumb": "images/products/23_thumb.jpg",
+                "file": "images/23_pizzas_incrivel_1920_1200.jpg"
+            }
+        },
+        "24": {
+            "path": "pages/24_pratos_prontos_incrivel.php",
+            "menu": true,
+            "menuGroup": 7,
+            "menuIdx": 23,
+            "product": "Pratos Prontos Incrível",
+            "export": {
+                "thumb": "images/products/24_thumb.jpg",
+                "file": "images/24_pratos_prontos_incrivel_1920_1200.jpg"
+            }
+        },
+        "25": {
+            "path": "pages/25_mortadela_tradicional_marba.php",
+            "menu": true,
+            "menuGroup": 8,
+            "menuIdx": 24,
+            "product": "Mortadela Tradicional Marba",
+            "export": {
+                "thumb": "images/products/25_thumb.jpg",
+                "file": "images/25_mortadela_tradicional_marba_1920_1200.jpg"
+            }
+        },
+        "26": {
+            "path": "pages/26_mortadela_defumada_marba_royal.php",
+            "menu": true,
+            "menuGroup": 8,
+            "menuIdx": 25,
+            "product": "Mortadela Defumada Marba",
+            "export": {
+                "thumb": "images/products/26_thumb.jpg",
+                "file": "images/26_mortadela_defumada_marba_royal_1920_1200.jpg"
+            }
+        },
+        "27": {
+            "path": "pages/27_mortadela_italiana_marba.php",
+            "menu": true,
+            "menuGroup": 8,
+            "menuIdx": 26,
+            "product": "Mortadela Italiana Marba",
+            "export": {
+                "thumb": "images/products/27_thumb.jpg",
+                "file": "images/27_mortadela_italiana_marba_1920_1200.jpg"
+            }
+        },
+        "28": {
+            "path": "pages/28_bacon_extra_pernil.php",
+            "menu": true,
+            "menuGroup": 9,
+            "menuIdx": 27,
+            "product": "Bacon Extra Pernil",
+            "export": {
+                "thumb": "images/products/28_thumb.jpg",
+                "file": "images/28_bacon_extra_pernil_1920_1200.jpg"
+            }
+        },
+        "29": {
+            "path": "pages/29_salame_tipo_hamburgues.php",
+            "menu": true,
+            "menuGroup": 9,
+            "menuIdx": 28,
+            "product": "Salame Tipo Hamburguês",
+            "export": {
+                "thumb": "images/products/29_thumb.jpg",
+                "file": "images/29_salame_tipo_hamburgues_1920_1200.jpg"
+            }
+        },
+        "30": {
+            "path": "pages/30_lombo_canadense.php",
+            "menu": true,
+            "menuGroup": 10,
+            "menuIdx": 29,
+            "product": "Lombo Canadense",
+            "export": {
+                "thumb": "images/products/30_thumb.jpg",
+                "file": "images/30_lombo_canadense_1920_1200.jpg"
+            }
+        },
+        "31": {
+            "path": "pages/31_salame_pepperoni.php",
+            "menu": true,
+            "menuGroup": 10,
+            "menuIdx": 30,
+            "product": "Salame Pepperoni",
+            "export": {
+                "thumb": "images/products/31_thumb.jpg",
+                "file": "images/31_salame_pepperoni_1920_1200.jpg"
+            }
+        },
+        "32": {
+            "path": "pages/32_massa_leve_premium.php",
+            "menu": true,
+            "menuGroup": 11,
+            "menuIdx": 31,
+            "product": "Massa Leve Premium",
+            "export": {
+                "thumb": "images/products/32_thumb.jpg",
+                "file": "images/32_massa_leve_premium_1920_1200.jpg"
+            }
+        },
+        "33": {
+            "path": "pages/33_chicken_supreme.php",
+            "menu": true,
+            "menuGroup": 12,
+            "menuIdx": 32,
+            "product": "Chicken Supreme",
+            "export": {
+                "thumb": "images/products/33_thumb.jpg",
+                "file": "images/33_chicken_supreme_1920_1200.jpg"
+            }
+        },
+        "34": {
+            "path": "pages/34_chicken_supreme_burguer.php",
+            "menu": true,
+            "menuGroup": 12,
+            "menuIdx": 33,
+            "product": "Chicken Supreme Burguer",
+            "export": {
+                "thumb": "images/products/34_thumb.jpg",
+                "file": "images/34_chicken_supreme_burguer_1920_1200.jpg"
+            }
+        },
+        "35": {
+            "path": "pages/35_chicken_fingers.php",
+            "menu": true,
+            "menuGroup": 12,
+            "menuIdx": 34,
+            "product": "Chicken Fingers",
+            "export": {
+                "thumb": "images/products/35_thumb.jpg",
+                "file": "images/35_chicken_fingers_1920_1200.jpg"
+            }
+        },
+        "36": {
+            "path": "pages/36_queijo_crispy_burguer.php",
+            "menu": true,
+            "menuGroup": 12,
+            "menuIdx": 35,
+            "product": "Queijo Crispy Burguer",
+            "export": {
+                "thumb": "images/products/36_thumb.jpg",
+                "file": "images/36_queijo_crispy_burguer_1920_1200.jpg"
+            }
+        },
+        "37": {
+            "path": "pages/37_linguica_toscana_mini.php",
+            "menu": true,
+            "menuGroup": 12,
+            "menuIdx": 36,
+            "product": "Linguiça Toscana Mini",
+            "export": {
+                "thumb": "images/products/37_thumb.jpg",
+                "file": "images/37_linguica_toscana_mini_1920_1200.jpg"
+            }
+        },
+        "38": {
+            "path": "pages/38_pepperoni_em_fatias.php",
+            "menu": true,
+            "menuGroup": 12,
+            "menuIdx": 37,
+            "product": "Pepperoni em Fatias",
+            "export": {
+                "thumb": "images/products/38_thumb.jpg",
+                "file": "images/38_pepperoni_em_fatias_1920_1200.jpg"
             }
         }
     }

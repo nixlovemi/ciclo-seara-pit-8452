@@ -1,0 +1,1 @@
+<img class="img-fluid img-full" src="images/32_massa_leve_premium_1920_1200.jpg" />

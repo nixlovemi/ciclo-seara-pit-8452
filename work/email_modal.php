@@ -52,7 +52,12 @@ if (isset($_POST['send']) && $_POST['send'] == 1) {
         $arrFiles[] = $item['export']['file'];
     }
 
-    echo sendEmail($email, 'Catálogo Seara', 'Oi<br />Segue anexo o documento requisitado. Obg!', $arrFiles);
+    $body = 'Olá<br /><br />';
+    $body .= 'Obrigado pela sua visita no APAS2023.<br />';
+    $body .= 'Segue em anexo as informações referente ao(s) produto(s) selecionado(s).<br /><br />';
+    $body .= 'Atenciosamente, equipe Seara.';
+
+    echo sendEmail($email, 'Seara - APAS2023', $body, $arrFiles);
     return;
 }
 ?>
@@ -121,6 +126,7 @@ if (isset($_POST['send']) && $_POST['send'] == 1) {
     {
         $('#alert-msg #message').html(`<b>Atenção</b>: ${msg}`);
         $('#alert-msg').fadeIn(350);
+        $('#emailModal').animate({ scrollTop: 0 }, 350);
 
         setTimeout(() => {
             closeAlert();
@@ -145,7 +151,8 @@ if (isset($_POST['send']) && $_POST['send'] == 1) {
     // show.bs.modal, shown.bs.modal, hide.bs.modal, hidden.bs.modal
     $('#emailModal').on('shown.bs.modal', function (e) {
         // vars
-        let currentPage = $('#dv-container').find('ul.menu-toc li.clickable.menu-toc-current').data('idx');
+        // let currentPage = $('#dv-container').find('ul.menu-toc li.clickable.menu-toc-current').data('idx');
+        let currentPage = $('#dv-container').find('ul.menu-toc .clickable.menu-toc-current').data('idx');
         let $exportItens = $('div.export-items');
 
         setTimeout(() => {

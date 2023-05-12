@@ -1,0 +1,1 @@
+<img class="img-fluid img-full" src="images/28_bacon_extra_pernil_1920_1200.jpg" />

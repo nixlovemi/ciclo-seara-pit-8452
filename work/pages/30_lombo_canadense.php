@@ -1,0 +1,1 @@
+<img class="img-fluid img-full" src="images/30_lombo_canadense_1920_1200.jpg" />
