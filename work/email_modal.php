@@ -43,13 +43,18 @@ if (isset($_GET['form']) && $_GET['form'] == 1) {
 if (isset($_POST['send']) && $_POST['send'] == 1) {
     $ids = $_POST['ids'];
     $email = $_POST['email'];
+    $allPages = $_POST['allPages'];
 
-    $arrSend = array_filter($arrExport, function($val) use ($ids) {
-        return in_array($val['menuIdx'], $ids);
-    });
     $arrFiles = [];
-    foreach($arrSend as $item) {
-        $arrFiles[] = $item['export']['file'];
+    if ($allPages == true) {
+        $arrFiles[] = $config['allPagesPdfUrl'];
+    } else {
+        $arrSend = array_filter($arrExport, function($val) use ($ids) {
+            return in_array($val['menuIdx'], $ids);
+        });
+        foreach($arrSend as $item) {
+            $arrFiles[] = $item['export']['file'];
+        }
     }
 
     $body = 'Olá<br /><br />';
@@ -68,7 +73,7 @@ if (isset($_POST['send']) && $_POST['send'] == 1) {
             <div class="modal-header">
                 <h5 class="modal-title">Enviar material</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true">&times;</span>
                 </button>
             </div>
 
@@ -94,11 +99,11 @@ if (isset($_POST['send']) && $_POST['send'] == 1) {
                     </button>
                 </div>
 
-                <div class="row">
+                <div class="row mb-3">
                     <div class="col">
                         <input
                             type="email"
-                            class="form-control mb-3"
+                            class="form-control"
                             name="inputEmail"
                             id="inputEmail"
                             placeholder="E-mail ..."
@@ -106,12 +111,20 @@ if (isset($_POST['send']) && $_POST['send'] == 1) {
                         />
                     </div>
                 </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="seara custom-control-input" id="allPages">
+                            <label class="seara custom-control-label" for="allPages">Catálogo Completo</label>
+                        </div>
+                    </div>
+                </div>
                 <div class="row export-items">
                     
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary submit">
+                <button type="button" class="btn btn-send submit">
                     <i class="fa fa-envelope-o" aria-hidden="true"></i>
                     Enviar
                 </button>
@@ -161,6 +174,9 @@ if (isset($_POST['send']) && $_POST['send'] == 1) {
                 $exportItens.html(data);
 
                 setTimeout(() => {
+                    $('#emailModal #allPages').prop('checked', false);
+                    $('#emailModal .export-items').show(200);
+                    $('#emailModal input#inputEmail').val('');
                     let $imageCheckbox = $exportItens.find('div.image-checkbox');
                     $imageCheckbox.find(`input[data-idx='${currentPage}']`).parent().find('label').trigger('click');
                 }, 175);
@@ -187,8 +203,9 @@ if (isset($_POST['send']) && $_POST['send'] == 1) {
             return;
         }
 
+        let allPages = $('#emailModal #allPages').is(':checked');
         let items = $(this).closest('div.modal-content').find('input:checked');
-        if (items.length <= 0) {
+        if (items.length <= 0 && !allPages) {
             showAlert('Nenhum produto selecionado!');
             return;
         }
@@ -241,6 +258,17 @@ if (isset($_POST['send']) && $_POST['send'] == 1) {
             }
         });
 
-        $.post("email_modal.php", {'send': 1, email: email, 'ids': idxs}, function(result) { });
+        $.post("email_modal.php", {'send': 1, email: email, 'ids': idxs, 'allPages': (allPages) ? 1: 0}, function(result) { });
+    });
+
+    $(document).on('change', '#emailModal #allPages', function(e) {
+        let isChecked = $(this).is(':checked');
+        let $exportItems = $('#emailModal .export-items');
+
+        if (isChecked) {
+            $exportItems.hide(200);
+        } else {
+            $exportItems.show(200);
+        }
     });
 </script>

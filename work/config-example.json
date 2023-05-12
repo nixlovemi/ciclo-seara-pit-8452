@@ -6,10 +6,10 @@
         "SMTPSecure": "ssl",
         "Port": 465,
         "Host": "host.com.br",
-        "Username": "username@host.com.br",
+        "Username": "user@host.com.br",
         "Password": "Password",
-        "FromName": "From Name",
-        "FromEmail": "dont-reply@host.com.br"
+        "FromName": "FromName",
+        "FromEmail": "user@host.com.br"
     },
     "menuGroupOrder": {
         "0": "Seara",
@@ -26,6 +26,7 @@
         "11": "Massa Leve Premium",
         "12": "Seara Food Solution"
     },
+    "allPagesPdfUrl": "files/full.zip",
     "pages": {
         "01": {
             "path": "pages/01_capa.php",

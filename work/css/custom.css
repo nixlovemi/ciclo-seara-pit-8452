@@ -311,6 +311,20 @@ img.responsive {
 .new-menu-links {
 	background-color: #f9f9f9;
 }
+.btn-send {
+	color: #fff;
+	background-color: #f36400;
+	border-color: #f36400;
+}
+.btn-send:hover {
+	color: #fff;
+	background-color: #ff842e !important;
+}
+.seara.custom-control-input:checked ~ .seara.custom-control-label::before {
+	color: #fff;
+	border-color: #f36400;
+	background-color: #f36400;
+}
 
 /* ------------------------------------------------------ */
 
