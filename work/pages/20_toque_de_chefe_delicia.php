@@ -1,1 +1,0 @@
-<img class="img-fluid img-full" src="images/20_toque_de_chefe_delicia_1920_1200.jpg" />
