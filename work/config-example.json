@@ -26,7 +26,7 @@
         "11": "Massa Leve Premium",
         "12": "Seara Food Solution"
     },
-    "allPagesPdfUrl": "files/full.zip",
+    "allPagesPdfUrl": "files/00_Catalogo_de_Lancamentos_2023_Seara.zip",
     "pages": {
         "01": {
             "path": "pages/01_capa.php",
@@ -52,7 +52,7 @@
             "product": "Frangos Empanados",
             "export": {
                 "thumb": "images/products/03_thumb.jpg",
-                "file": "images/03_Frangos_Empanados_1920_1200.jpg"
+                "file": "files/03_Seara_Frangos_Empanados.zip"
             }
         },
         "04": {
@@ -63,7 +63,7 @@
             "product": "Big Tekitos",
             "export": {
                 "thumb": "images/products/04_thumb.jpg",
-                "file": "images/04_Big_Tekitos_1920_1200.jpg"
+                "file": "files/04_Seara_Big_Tekitos.zip"
             }
         },
         "05": {
@@ -74,7 +74,7 @@
             "product": "Linha Dia a Dia",
             "export": {
                 "thumb": "images/products/05_thumb.jpg",
-                "file": "images/05_Seara_Linha_Dia_a_Dia_1920_1200.jpg"
+                "file": "files/05_Seara_Linha_Dia_Dia.zip"
             }
         },
         "06": {
@@ -85,7 +85,7 @@
             "product": "Linha Churrasco",
             "export": {
                 "thumb": "images/products/06_thumb.jpg",
-                "file": "images/06_Seara_Linha_Churrasco_1920_1200.jpg"
+                "file": "files/06_Seara_Linha_Churrasco.zip"
             }
         },
         "07": {
@@ -96,7 +96,7 @@
             "product": "Frango de Padaria",
             "export": {
                 "thumb": "images/products/07_thumb.jpg",
-                "file": "images/07_Frango_de_Padaria_1920_1200.jpg"
+                "file": "files/07_Seara_Frango_de_Padaria_Farofa.zip"
             }
         },
         "08": {
@@ -107,7 +107,7 @@
             "product": "Frango de Padaria Petisco",
             "export": {
                 "thumb": "images/products/08_thumb.jpg",
-                "file": "images/08_Frango_de_Padaria_Petisco_1920_1200.jpg"
+                "file": "files/08_Seara_Frango_de_Padaria_Petisco.zip"
             }
         },
         "09": {
@@ -118,7 +118,7 @@
             "product": "Lombo Suíno Temperado",
             "export": {
                 "thumb": "images/products/09_thumb.jpg",
-                "file": "images/09_Lombo_Suino_Temperado_1920_1200.jpg"
+                "file": "files/09_Seara_Lombo_Suino_Temperado.zip"
             }
         },
         "10": {
@@ -129,7 +129,7 @@
             "product": "Bacon Gourmet",
             "export": {
                 "thumb": "images/products/10_thumb.jpg",
-                "file": "images/10_Bacon_Seara_Gourmet_1920_1200.jpg"
+                "file": "files/10_Seara_Gourmet_Bacon.zip"
             }
         },
         "11": {
@@ -140,7 +140,7 @@
             "product": "Frios Importados Gourmet",
             "export": {
                 "thumb": "images/products/11_thumb.jpg",
-                "file": "images/11_Frios_Importados_Gourmet_1920_1200.jpg"
+                "file": "files/11_Seara_Gourmet_Frios_Importados.zip"
             }
         },
         "12": {
@@ -151,7 +151,7 @@
             "product": "Salames Gourmet",
             "export": {
                 "thumb": "images/products/12_thumb.jpg",
-                "file": "images/12_Salames_Seara_Gourmet_1920_1200.jpg"
+                "file": "files/12_Seara_Gourmet_Salames.zip"
             }
         },
         "13": {
@@ -162,7 +162,7 @@
             "product": "Hambúrgueres Gourmet",
             "export": {
                 "thumb": "images/products/13_thumb.jpg",
-                "file": "images/13_Hamburgueres_Seara_Gourmet_1920_1200.jpg"
+                "file": "files/13_Seara_Gourmet_Hamburgueres.zip"
             }
         },
         "14": {
@@ -173,7 +173,7 @@
             "product": "Chicken Bits Rezende",
             "export": {
                 "thumb": "images/products/14_thumb.jpg",
-                "file": "images/14_Chicken_Bits_Rezende_1920_1200.jpg"
+                "file": "files/14_Rezende_Chicken_Bites.zip"
             }
         },
         "15": {
@@ -184,7 +184,7 @@
             "product": "Linguiças Defumadas Rezende",
             "export": {
                 "thumb": "images/products/15_thumb.jpg",
-                "file": "images/15_Linguicas_Defumadas_Rezende_1920_1200.jpg"
+                "file": "files/15_Rezende_Linguicas.zip"
             }
         },
         "16": {
@@ -195,7 +195,7 @@
             "product": "Empanados Lebon",
             "export": {
                 "thumb": "images/products/16_thumb.jpg",
-                "file": "images/16_Empanados_Lebon_1920_1200.jpg"
+                "file": "files/16_Lebon_Empanados.zip"
             }
         },
         "17": {
@@ -206,7 +206,7 @@
             "product": "Doriana 1KG Cremosa Sem Sal",
             "export": {
                 "thumb": "images/products/17_thumb.jpg",
-                "file": "images/17_doriana_1kg_cremosa_sem_sal_1920_1200.jpg"
+                "file": "files/17_Doriana_1Kg.zip"
             }
         },
         "18": {
@@ -217,7 +217,7 @@
             "product": "Tablete Culinário Doriana",
             "export": {
                 "thumb": "images/products/18_thumb.jpg",
-                "file": "images/18_tablete_culinario_doriana_1920_1200.jpg"
+                "file": "files/18_Doriana_Tablete.zip"
             }
         },
         "19": {
@@ -228,18 +228,18 @@
             "product": "Delicata Cremosa",
             "export": {
                 "thumb": "images/products/19_thumb.jpg",
-                "file": "images/19_delicata_cremosa_1920_1200.jpg"
+                "file": "files/19_Delicata_Margarina_250g.zip"
             }
         },
         "20": {
-            "path": "pages/20_toque_de_chefe_delicia.php",
+            "path": "pages/20_toque_de_chef_delicia.php",
             "menu": true,
             "menuGroup": 6,
             "menuIdx": 19,
-            "product": "Toque de Chefe Delícia",
+            "product": "Toque de Chef Delícia",
             "export": {
                 "thumb": "images/products/20_thumb.jpg",
-                "file": "images/20_toque_de_chefe_delicia_1920_1200.jpg"
+                "file": "files/20_Delicia_Toque_de_Chef.zip"
             }
         },
         "21": {
@@ -250,7 +250,7 @@
             "product": "Tablete Culinário Delícia",
             "export": {
                 "thumb": "images/products/21_thumb.jpg",
-                "file": "images/21_tablete_culinario_delicia_1920_1200.jpg"
+                "file": "files/21_Delicia_Tablete.zip"
             }
         },
         "22": {
@@ -261,7 +261,7 @@
             "product": "Empanados Incrível",
             "export": {
                 "thumb": "images/products/22_thumb.jpg",
-                "file": "images/22_empanados_incrivel_1920_1200.jpg"
+                "file": "files/22_Incrivel_Empanados.zip"
             }
         },
         "23": {
@@ -272,7 +272,7 @@
             "product": "Pizzas Incrível",
             "export": {
                 "thumb": "images/products/23_thumb.jpg",
-                "file": "images/23_pizzas_incrivel_1920_1200.jpg"
+                "file": "files/23_Incrivel_Pizza.zip"
             }
         },
         "24": {
@@ -283,7 +283,7 @@
             "product": "Pratos Prontos Incrível",
             "export": {
                 "thumb": "images/products/24_thumb.jpg",
-                "file": "images/24_pratos_prontos_incrivel_1920_1200.jpg"
+                "file": "files/24_Incrivel_Pratos_Prontos.zip"
             }
         },
         "25": {
@@ -294,7 +294,7 @@
             "product": "Mortadela Tradicional Marba",
             "export": {
                 "thumb": "images/products/25_thumb.jpg",
-                "file": "images/25_mortadela_tradicional_marba_1920_1200.jpg"
+                "file": "files/25_Marba_Tradicional.zip"
             }
         },
         "26": {
@@ -305,7 +305,7 @@
             "product": "Mortadela Defumada Marba",
             "export": {
                 "thumb": "images/products/26_thumb.jpg",
-                "file": "images/26_mortadela_defumada_marba_royal_1920_1200.jpg"
+                "file": "files/26_Marba_Royal.zip"
             }
         },
         "27": {
@@ -316,7 +316,7 @@
             "product": "Mortadela Italiana Marba",
             "export": {
                 "thumb": "images/products/27_thumb.jpg",
-                "file": "images/27_mortadela_italiana_marba_1920_1200.jpg"
+                "file": "files/27_Marba_Superiore.zip"
             }
         },
         "28": {
@@ -327,7 +327,7 @@
             "product": "Bacon Extra Pernil",
             "export": {
                 "thumb": "images/products/28_thumb.jpg",
-                "file": "images/28_bacon_extra_pernil_1920_1200.jpg"
+                "file": "files/28_Hans_Bacon.zip"
             }
         },
         "29": {
@@ -338,7 +338,7 @@
             "product": "Salame Tipo Hamburguês",
             "export": {
                 "thumb": "images/products/29_thumb.jpg",
-                "file": "images/29_salame_tipo_hamburgues_1920_1200.jpg"
+                "file": "files/29_Hans_Salame.zip"
             }
         },
         "30": {
@@ -349,7 +349,7 @@
             "product": "Lombo Canadense",
             "export": {
                 "thumb": "images/products/30_thumb.jpg",
-                "file": "images/30_lombo_canadense_1920_1200.jpg"
+                "file": "files/30_Eder_Lombo.zip"
             }
         },
         "31": {
@@ -360,7 +360,7 @@
             "product": "Salame Pepperoni",
             "export": {
                 "thumb": "images/products/31_thumb.jpg",
-                "file": "images/31_salame_pepperoni_1920_1200.jpg"
+                "file": "files/31_Eder_Pepperoni.zip"
             }
         },
         "32": {
@@ -371,7 +371,7 @@
             "product": "Massa Leve Premium",
             "export": {
                 "thumb": "images/products/32_thumb.jpg",
-                "file": "images/32_massa_leve_premium_1920_1200.jpg"
+                "file": "files/32_massa_leve_premium_1920_1200.zip"
             }
         },
         "33": {
@@ -382,7 +382,7 @@
             "product": "Chicken Supreme",
             "export": {
                 "thumb": "images/products/33_thumb.jpg",
-                "file": "images/33_chicken_supreme_1920_1200.jpg"
+                "file": "files/33_chicken_supreme_1920_1200.zip"
             }
         },
         "34": {
@@ -393,7 +393,7 @@
             "product": "Chicken Supreme Burguer",
             "export": {
                 "thumb": "images/products/34_thumb.jpg",
-                "file": "images/34_chicken_supreme_burguer_1920_1200.jpg"
+                "file": "files/34_chicken_supreme_burguer_1920_1200.zip"
             }
         },
         "35": {
@@ -404,7 +404,7 @@
             "product": "Chicken Fingers",
             "export": {
                 "thumb": "images/products/35_thumb.jpg",
-                "file": "images/35_chicken_fingers_1920_1200.jpg"
+                "file": "files/35_chicken_fingers_1920_1200.zip"
             }
         },
         "36": {
@@ -415,7 +415,7 @@
             "product": "Queijo Crispy Burguer",
             "export": {
                 "thumb": "images/products/36_thumb.jpg",
-                "file": "images/36_queijo_crispy_burguer_1920_1200.jpg"
+                "file": "files/36_queijo_crispy_burguer_1920_1200.zip"
             }
         },
         "37": {
@@ -426,7 +426,7 @@
             "product": "Linguiça Toscana Mini",
             "export": {
                 "thumb": "images/products/37_thumb.jpg",
-                "file": "images/37_linguica_toscana_mini_1920_1200.jpg"
+                "file": "files/37_linguica_toscana_mini_1920_1200.zip"
             }
         },
         "38": {
@@ -437,7 +437,7 @@
             "product": "Pepperoni em Fatias",
             "export": {
                 "thumb": "images/products/38_thumb.jpg",
-                "file": "images/38_pepperoni_em_fatias_1920_1200.jpg"
+                "file": "files/38_pepperoni_em_fatias_1920_1200.zip"
             }
         }
     }
